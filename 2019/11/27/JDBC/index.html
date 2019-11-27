@@ -505,8 +505,18 @@ height:50vh;
         2.判断用户是否登录成功
             select * from usertable where username = ‘’ and password = ‘’；
     * 步骤
-        1.创建数据库表usertable</code></pre><p>###JDBC控制事务<br>    1.事务：一个包含多个步骤的业务操作。如果这个业务操作被事务管理，那么这多个步骤要么同时成功，要么同时失败。<br>    2.操作：<br>        1.开启事务<br>        2.提交事务<br>        3.回滚事务<br>    3.使用Connection对象来管理事务<br>        * 开启事务：void setAutoCommit(boolean autoCommit) 调用该方法设置参数为false，即开启事务。<br>            * 在执行sql之前开启事务<br>        * 提交事务：void commit() 使所有上一次提交/回滚后进行的更改成为持久更改，并释放此 Connection 对象当前持有的所有数据库锁。<br>            * 当所有sql执行完提交事务<br>        * 回滚事务：void rollback() 取消在当前事务中进行的所有更改，并释放此 Connection 对象当前持有的所有数据库锁。<br>            * 在catch中回滚事务</p>
-
+        1.创建数据库表usertable</code></pre><h3 id="JDBC控制事务"><a href="#JDBC控制事务" class="headerlink" title="JDBC控制事务"></a>JDBC控制事务</h3><pre><code>1.事务：一个包含多个步骤的业务操作。如果这个业务操作被事务管理，那么这多个步骤要么同时成功，要么同时失败。
+2.操作：
+    1.开启事务
+    2.提交事务
+    3.回滚事务
+3.使用Connection对象来管理事务
+    * 开启事务：void setAutoCommit(boolean autoCommit) 调用该方法设置参数为false，即开启事务。 
+        * 在执行sql之前开启事务
+    * 提交事务：void commit() 使所有上一次提交/回滚后进行的更改成为持久更改，并释放此 Connection 对象当前持有的所有数据库锁。 
+        * 当所有sql执行完提交事务
+    * 回滚事务：void rollback() 取消在当前事务中进行的所有更改，并释放此 Connection 对象当前持有的所有数据库锁。 
+        * 在catch中回滚事务</code></pre>
     </article>
     <!-- license  -->
     
@@ -514,7 +524,7 @@ height:50vh;
             <p>Author：<a href="http://yoursite.com">Leung Wah</a>
             <p>原文链接：<a href="http://yoursite.com/2019/11/27/JDBC/">http://yoursite.com/2019/11/27/JDBC/</a>
             <p>发表日期：<a href="http://yoursite.com/2019/11/27/JDBC/">November 27th 2019, 10:37:07 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2019/11/27/JDBC/">November 27th 2019, 10:34:22 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2019/11/27/JDBC/">November 27th 2019, 10:51:58 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -639,7 +649,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBD"><span class="toc-number">1.</span> <span class="toc-text">JDBD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-概念：Java-Database-Connectivity-（Java数据库连接）Java语言操作数据库"><span class="toc-number">1.1.</span> <span class="toc-text">1.概念：Java Database Connectivity （Java数据库连接）Java语言操作数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-快速入门："><span class="toc-number">1.2.</span> <span class="toc-text">2.快速入门：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-详解各个对象："><span class="toc-number">1.3.</span> <span class="toc-text">3.详解各个对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽取JDBC工具类：JDBCUtils"><span class="toc-number">1.4.</span> <span class="toc-text">抽取JDBC工具类：JDBCUtils</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBD"><span class="toc-number">1.</span> <span class="toc-text">JDBD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-概念：Java-Database-Connectivity-（Java数据库连接）Java语言操作数据库"><span class="toc-number">1.1.</span> <span class="toc-text">1.概念：Java Database Connectivity （Java数据库连接）Java语言操作数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-快速入门："><span class="toc-number">1.2.</span> <span class="toc-text">2.快速入门：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-详解各个对象："><span class="toc-number">1.3.</span> <span class="toc-text">3.详解各个对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽取JDBC工具类：JDBCUtils"><span class="toc-number">1.4.</span> <span class="toc-text">抽取JDBC工具类：JDBCUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC控制事务"><span class="toc-number">1.5.</span> <span class="toc-text">JDBC控制事务</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
