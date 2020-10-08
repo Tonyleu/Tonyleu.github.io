@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">379</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">309</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,37 +395,41 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p>​    目标：使用Hexo搭建属于自己的博客，并且实现多端操作。</p>
-<h3 id="准备工作：Node-js-和-Git"><a href="#准备工作：Node-js-和-Git" class="headerlink" title="准备工作：Node.js  和 Git"></a>准备工作：<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>  和 <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></h3><p>​    安装Node.js完成之后查看版本信息<strong>node -v</strong>和<strong>npm -v</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[liang@localhost ~]$ node -v</span><br><span class="line">v12.16.3</span><br><span class="line">[liang@localhost ~]$ npm -v</span><br><span class="line">6.14.4</span><br></pre></td></tr></table></figure>
+        <p>目标：使用Hexo搭建属于自己的博客，并且实现多端操作。</p>
+<h3 id="准备工作：Node-js-和-Git"><a href="#准备工作：Node-js-和-Git" class="headerlink" title="准备工作：Node.js  和 Git"></a>准备工作：<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>  和 <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></h3><p>安装Node.js完成之后查看是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
 
-<p>​    可选：安装cnpm可以加快速度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>可选：安装cnpm可以加快速度</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装Hexo脚手架工具"><a href="#安装Hexo脚手架工具" class="headerlink" title="安装Hexo脚手架工具"></a>安装Hexo脚手架工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="安装Hexo脚手架工具"><a href="#安装Hexo脚手架工具" class="headerlink" title="安装Hexo脚手架工具"></a>安装Hexo脚手架工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<p>​    验证安装是否成功<strong>hexo -v</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[liang@localhost ~]$ hexo -v</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Linux 3.10.0-1127.el7.x86_64 linux x64</span><br><span class="line">node: 12.16.3</span><br><span class="line">v8: 7.8.279.23-node.35</span><br><span class="line">uv: 1.34.2</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.16.0</span><br><span class="line">modules: 72</span><br><span class="line">nghttp2: 1.40.0</span><br><span class="line">napi: 5</span><br><span class="line">llhttp: 2.0.4</span><br><span class="line">http_parser: 2.9.3</span><br><span class="line">openssl: 1.1.1g</span><br><span class="line">cldr: 36.0</span><br><span class="line">icu: 65.1</span><br><span class="line">tz: 2019c</span><br><span class="line">unicode: 12.1</span><br></pre></td></tr></table></figure>
+<p>验证安装是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
 
-<h3 id="创建博客的文件夹"><a href="#创建博客的文件夹" class="headerlink" title="创建博客的文件夹"></a>创建博客的文件夹</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir &apos;文件夹名称&apos;</span><br><span class="line">cd &apos;文件夹名称&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="创建博客的文件夹"><a href="#创建博客的文件夹" class="headerlink" title="创建博客的文件夹"></a>创建博客的文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir <span class="string">'文件夹名称'</span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="string">'文件夹名称'</span></span><br></pre></td></tr></table></figure>
 
-<p>​    生成Hexo的文件<strong>hexo init</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="初始化Hexo文件夹"><a href="#初始化Hexo文件夹" class="headerlink" title="初始化Hexo文件夹"></a>初始化Hexo文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 
-<p>​    <strong>执行完命令后会自动生成四个文件夹和五个文件</strong></p>
-<p>​    <strong>文件夹包括：</strong></p>
-<p>​    node_modules文件夹：如果没有这个文件，可以尝试使用npm install命令。</p>
-<p>​    scaffolds文件夹：</p>
-<p>​    source文件夹：存放展示的文章，注意文件类型为.md。</p>
-<p>​    themes文件夹：存放主题文件。</p>
-<p>​    <strong>文件包括：</strong></p>
-<p>​    .gitignore文件：</p>
-<p>​    _config.yml文件：</p>
-<p>​    db.json文件：</p>
-<p>​    package.json文件：</p>
-<p>​    package-lock.json文件：</p>
-<p>​    如果执行完hexo init命令后，生成的文件数量不足，可以执行npm install命令生成node_modules文件夹，再执行hexo server或者hexo s命令，浏览器输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 观察预览效果。</p>
-<p>​    又或者将整个博客文件夹删除，重新执行hexo init命令。</p>
+<p>下载依赖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a>本地测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>首先需要在github创建一个仓库，仓库名称为“github用户名.github.io”<br>建好仓库后回到博客文件夹安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件_config.yml，在deploy追加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: 刚刚创建的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>生成静态文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>部署到github</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="多端操作"><a href="#多端操作" class="headerlink" title="多端操作"></a>多端操作</h3><p>将源文件上传到github，需要写的时候pull或者clone下来。<br>有多种方法实现，这里采用的是新建一个仓库存放源文件。<br>记得上传代码时候.gitignore内只添加.deploy_git和node_modules<br>在新电脑clone之后需要安装依赖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -434,18 +438,13 @@ height:50vh;
             <p>Author：<a href="https://Tonyleu.github.io">Leung Wah</a>
             <p>原文链接：<a href="https://tonyleu.github.io/2020/10/05/Hexo/">https://tonyleu.github.io/2020/10/05/Hexo/</a>
             <p>发表日期：<a href="https://tonyleu.github.io/2020/10/05/Hexo/">October 5th 2020, 11:00:07 pm</a>
-            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/05/Hexo/">October 6th 2020, 8:58:24 pm</a>
+            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/05/Hexo/">October 8th 2020, 10:06:07 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/10/05/HTML/" title= "HTML">
-                    <div class="nextTitle">HTML</div>
-                </a>
             
         </li>
         <li class="previous">
@@ -564,7 +563,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo"><span class="toc-number">1.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作：Node-js-和-Git"><span class="toc-number">1.1.</span> <span class="toc-text">准备工作：Node.js  和 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo脚手架工具"><span class="toc-number">1.2.</span> <span class="toc-text">安装Hexo脚手架工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建博客的文件夹"><span class="toc-number">1.3.</span> <span class="toc-text">创建博客的文件夹</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作：Node-js-和-Git"><span class="toc-number">1.</span> <span class="toc-text">准备工作：Node.js  和 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo脚手架工具"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo脚手架工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建博客的文件夹"><span class="toc-number">3.</span> <span class="toc-text">创建博客的文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化Hexo文件夹"><span class="toc-number">4.</span> <span class="toc-text">初始化Hexo文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地测试"><span class="toc-number">5.</span> <span class="toc-text">本地测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到github"><span class="toc-number">6.</span> <span class="toc-text">部署到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多端操作"><span class="toc-number">7.</span> <span class="toc-text">多端操作</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -595,29 +594,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 4
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -627,20 +606,6 @@ top:50vh;
     
     
     
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2020/10/05/JDBC/" >JDBC</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
     
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
@@ -662,20 +627,6 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/10/05/Hexo/" >Hexo</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/2020/10/05/HTML/" >HTML</a>
         </li>
     
     </div>
