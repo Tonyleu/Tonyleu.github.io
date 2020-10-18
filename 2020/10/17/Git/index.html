@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">0</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">162</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,7 +395,15 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h2 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h2><h3 id="本地仓库搭建"><a href="#本地仓库搭建" class="headerlink" title="本地仓库搭建"></a>本地仓库搭建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录新建一个Git代码库</span></span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个目录，将其初始化为Git代码库</span></span><br><span class="line">$ git init [project-name]</span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a>克隆远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [url]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h2><h3 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看指定文件状态</span></span><br><span class="line">$ git status [filename]</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看所有文件状态</span></span><br><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="忽略文件-gitignore"><a href="#忽略文件-gitignore" class="headerlink" title="忽略文件.gitignore"></a>忽略文件.gitignore</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注释</span></span><br><span class="line">*.txt		<span class="comment">#忽略所有.txt结尾的文件</span></span><br><span class="line">!lib.txt	<span class="comment">#但lib.txt除外</span></span><br><span class="line">/temp		<span class="comment">#仅忽略项目根目录下的temp文件，不包括其他目录的temp</span></span><br><span class="line">build/		<span class="comment">#忽略bulid/目录下的所有文件</span></span><br><span class="line">doc/*.txt	<span class="comment">#忽略doc/目录下以.txt结尾的文件</span></span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -403,7 +411,7 @@ height:50vh;
             <p>Author：<a href="https://Tonyleu.github.io">Leung Wah</a>
             <p>原文链接：<a href="https://tonyleu.github.io/2020/10/17/Git/">https://tonyleu.github.io/2020/10/17/Git/</a>
             <p>发表日期：<a href="https://tonyleu.github.io/2020/10/17/Git/">October 17th 2020, 11:17:46 pm</a>
-            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/17/Git/">October 17th 2020, 11:17:46 pm</a>
+            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/17/Git/">October 18th 2020, 4:15:25 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -524,7 +532,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git项目搭建"><span class="toc-number">1.</span> <span class="toc-text">Git项目搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库搭建"><span class="toc-number">1.1.</span> <span class="toc-text">本地仓库搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#克隆远程仓库"><span class="toc-number">1.2.</span> <span class="toc-text">克隆远程仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git文件操作"><span class="toc-number">2.</span> <span class="toc-text">Git文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看文件状态"><span class="toc-number">2.1.</span> <span class="toc-text">查看文件状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#忽略文件-gitignore"><span class="toc-number">2.2.</span> <span class="toc-text">忽略文件.gitignore</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -537,14 +545,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
