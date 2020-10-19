@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>SecureCRT SFTP · Tonyleu&#39;s Studio</title>
+    <title>注解和反射 · Tonyleu&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Tonyleu&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">SecureCRT SFTP</a>
+                <a href="#" class="post-name">注解和反射</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            SecureCRT SFTP
+            注解和反射
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">147</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">558</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/10/09</span>
+                    <span class="post-intro-time">2020/10/19</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,41 +395,59 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>使用SecureCRT连接远程服务器，SecureCRT功能强大，这是学习其中的SFTP传文件功能。</p>
-<h3 id="操作远程"><a href="#操作远程" class="headerlink" title="操作远程"></a>操作远程</h3><p>打印服务器端当前目录列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br></pre></td></tr></table></figure>
+        <h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>Java 注解（Annotation）又称 Java 标注，是 JDK5.0 引入的一种注释机制。</p>
+<p>Java 语言中的<strong><u>类</u></strong>、<strong><u>方法</u></strong>、<strong><u>变量</u></strong>、<strong><u>参数</u></strong>和<strong><u>包</u></strong>等都可以被标注。和 Javadoc 不同，Java 标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时可以获取到标注内容 。 当然它也支持自定义 Java 标注。</p>
+<p>注解可以配置参数，没有指定配置的参数使用默认值；</p>
+<p>如果参数名称是<strong><u>value</u></strong>，且只有一个参数，那么可以省略参数名称。</p>
+<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
+<li><p>@Override - 检查该方法是否是重写超类（父类）方法。</p>
+</li>
+<li><p>@Deprecated - 标记已过时的方法。</p>
+</li>
+<li><p>@SuppressWarnings - 指示编译器去忽略注解中声明的警告。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"all"</span>)	<span class="comment">/* 忽略所有警告 */</span></span><br></pre></td></tr></table></figure>
 
-<p>打印服务器端当前路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><ul>
+<li><p>@Target - 指定应用范围，<strong><u>类</u></strong>、<strong><u>方法</u></strong>、<strong><u>变量</u></strong>、<strong><u>参数</u></strong>和<strong><u>包</u></strong>等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ElementType.TYPE	<span class="comment">/* 类或接口 */</span></span><br><span class="line">ElementType.FIELD	<span class="comment">/* 字段 */</span></span><br><span class="line">ElementType.METHOD	<span class="comment">/* 方法 */</span></span><br><span class="line">ElementType.PARAMETER	<span class="comment">/* 方法参数 */</span></span><br><span class="line">ElementType.CONSTRUCTOR	<span class="comment">/* 构造方法 */</span></span><br><span class="line">ElementType.LOCAL_VARIABLE	<span class="comment">/* 局部变量 */</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@Retention - 标识这个注解的生命周期。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RetentionPolicy.SOURCE	<span class="comment">/* 仅编译期 */</span></span><br><span class="line">RetentionPolicy.CLASS	<span class="comment">/* 仅class文件 */</span></span><br><span class="line">RetentionPolicy.RUNTIME	<span class="comment">/* 运行期 */</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@Documented - 表示这个注解可以出现在 javadoc 中。</p>
+</li>
+<li><p>@Inherited - 表示这个注解具有<strong><u>继承性</u></strong>。</p>
+</li>
+</ul>
+<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p>Java语言使用@interface语法来定义注解（Annotation），它的格式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Inherited</span>	<span class="comment">/* 该注解具有继承性 */</span></span><br><span class="line"><span class="meta">@Documented</span>	<span class="comment">/* 该注解会出现在javadoc中 */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)	<span class="comment">/* 该注解会作用在类或接口中 */</span></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)	<span class="comment">/* 运行期仍有效 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation &#123;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;	<span class="comment">/* default设置默认值 */</span></span><br><span class="line">  <span class="function">String <span class="title">value</span><span class="params">()</span></span>;	<span class="comment">/* 参数名为value，只填一个参数时可省略*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>进入服务器端指定目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br></pre></td></tr></table></figure>
+<p>配置参数可以包括：</p>
+<ul>
+<li><p>所有基本类型</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>枚举类型</p>
+</li>
+<li><p>基本类型、String、Class以及枚举的数组</p>
+</li>
+</ul>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>Java的反射是指程序在运行期可以拿到一个对象的所有信息。</p>
+<p>有三个方法获取Class实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 通过一个class的静态变量class获取 */</span></span><br><span class="line">Class cls = String.class;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 通过该实例变量提供的getClass()方法获取 */</span></span><br><span class="line">String s = <span class="string">"Hello"</span>;</span><br><span class="line">Class cls = s.getClass();</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 通过静态方法Class.forName()获取 */</span></span><br><span class="line">Class cls = Class.forName(<span class="string">"java.lang.String"</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="操作本地"><a href="#操作本地" class="headerlink" title="操作本地"></a>操作本地</h3><p>打印本地当前目录列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lls</span><br></pre></td></tr></table></figure>
-
-<p>打印本地当前路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lpwd</span><br></pre></td></tr></table></figure>
-
-<p>进入本地指定目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lcd</span><br></pre></td></tr></table></figure>
-
-<h3 id="操作文件"><a href="#操作文件" class="headerlink" title="操作文件"></a>操作文件</h3><p>上传本地文件至服务器端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ put</span><br></pre></td></tr></table></figure>
-
-<p>拉取服务器端文件至本地</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ get</span><br></pre></td></tr></table></figure>
-
-<p><strong>以上为常用命令，多加练习！</strong></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="https://Tonyleu.github.io">Leung Wah</a>
-            <p>原文链接：<a href="https://tonyleu.github.io/2020/10/09/SecureCRT-SFTP/">https://tonyleu.github.io/2020/10/09/SecureCRT-SFTP/</a>
-            <p>发表日期：<a href="https://tonyleu.github.io/2020/10/09/SecureCRT-SFTP/">October 9th 2020, 11:21:43 pm</a>
-            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/09/SecureCRT-SFTP/">October 11th 2020, 5:18:21 pm</a>
+            <p>原文链接：<a href="https://tonyleu.github.io/2020/10/19/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/">https://tonyleu.github.io/2020/10/19/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/</a>
+            <p>发表日期：<a href="https://tonyleu.github.io/2020/10/19/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/">October 19th 2020, 1:29:56 pm</a>
+            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/19/%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/">October 19th 2020, 9:12:49 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -437,17 +455,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/10/10/Linux/" title= "Linux">
-                    <div class="nextTitle">Linux</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/10/05/Hexo/" title= "Hexo">
-                    <div class="prevTitle">Hexo</div>
+                <a href= "/2020/10/17/Git/" title= "Git">
+                    <div class="prevTitle">Git</div>
                 </a>
             
         </li>
@@ -555,7 +568,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作远程"><span class="toc-number">1.</span> <span class="toc-text">操作远程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作本地"><span class="toc-number">2.</span> <span class="toc-text">操作本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作文件"><span class="toc-number">3.</span> <span class="toc-text">操作文件</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#注解"><span class="toc-number">1.</span> <span class="toc-text">注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内置注解"><span class="toc-number">1.1.</span> <span class="toc-text">内置注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元注解"><span class="toc-number">1.2.</span> <span class="toc-text">元注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义注解"><span class="toc-number">1.3.</span> <span class="toc-text">自定义注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反射"><span class="toc-number">2.</span> <span class="toc-text">反射</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
