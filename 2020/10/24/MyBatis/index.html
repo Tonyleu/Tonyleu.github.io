@@ -459,15 +459,28 @@ height:50vh;
 <h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 使用注解 */</span></span><br><span class="line"><span class="meta">@Insert</span>(<span class="string">"insert into mybatis_study.user values (#&#123;id&#125;,#&#123;username&#125;,#&#123;password&#125;)"</span>)</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">addUserByAn</span><span class="params">(User user)</span></span>;</span><br><span class="line"><span class="meta">@Delete</span>(<span class="string">"delete from mybatis_study.user where id = #&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteUserByAn</span><span class="params">(@Param(<span class="string">"id"</span>)</span> <span class="keyword">int</span> id)</span>;</span><br><span class="line"><span class="meta">@Update</span>(<span class="string">"update mybatis_study.user set username = #&#123;username&#125;, password = #&#123;password&#125; where id = #&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">updateUserByAn</span><span class="params">(User user)</span></span>;</span><br><span class="line"><span class="meta">@Select</span>(<span class="string">"select mybatis_study.user.id, mybatis_study.user.username, mybatis_study.user.password from mybatis_study.user where id = #&#123;uid&#125;"</span>)</span><br><span class="line"><span class="function">User <span class="title">getUserByUid</span><span class="params">(@Param(<span class="string">"uid"</span>)</span><span class="keyword">int</span> id)</span>;</span><br></pre></td></tr></table></figure>
 
 <p><strong>多用@Param(“”)！！！</strong></p>
-<h3 id="多对一和一对多处理"><a href="#多对一和一对多处理" class="headerlink" title="多对一和一对多处理"></a>多对一和一对多处理</h3><p>关联 - association 【多对一】</p>
-<p>集合 - collection 【一对多】</p>
-<p>javaType &amp; ofType</p>
-<p>​    javaType 用来指定实体类中属性的类型</p>
-<p>​    ofType 用来指定映射到List或者集合中的pojo类型，泛型中的约束类型    </p>
-<p>注意点：</p>
-<p>​    保证SQL的可读性，尽量保证通俗易懂</p>
-<p>​    注意一对多和多对一中，属性名和字段的问题</p>
-<p>​    如果问题不好排查，可以使用日志log4j</p>
+<h3 id="多对一和一对多处理"><a href="#多对一和一对多处理" class="headerlink" title="多对一和一对多处理"></a>多对一和一对多处理</h3><ul>
+<li><p>关联 - association 【多对一】</p>
+</li>
+<li><p>集合 - collection 【一对多】</p>
+</li>
+</ul>
+<p><strong>javaType &amp; ofType</strong></p>
+<ul>
+<li><p>javaType 用来指定实体类中属性的类型</p>
+</li>
+<li><p>ofType 用来指定映射到List或者集合中的pojo类型，泛型中的约束类型    </p>
+</li>
+</ul>
+<p><strong>注意点：</strong></p>
+<ul>
+<li><p>保证SQL的可读性，尽量保证通俗易懂</p>
+</li>
+<li><p>注意一对多和多对一中，属性名和字段的问题</p>
+</li>
+<li><p>如果问题不好排查，可以使用日志log4j</p>
+</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -476,7 +489,7 @@ height:50vh;
             <p>Author：<a href="https://Tonyleu.github.io">Leung Wah</a>
             <p>原文链接：<a href="https://tonyleu.github.io/2020/10/24/MyBatis/">https://tonyleu.github.io/2020/10/24/MyBatis/</a>
             <p>发表日期：<a href="https://tonyleu.github.io/2020/10/24/MyBatis/">October 24th 2020, 10:19:34 pm</a>
-            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/24/MyBatis/">November 6th 2020, 11:39:52 pm</a>
+            <p>更新日期：<a href="https://tonyleu.github.io/2020/10/24/MyBatis/">November 7th 2020, 10:24:01 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -615,6 +628,16 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
